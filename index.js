@@ -1,5 +1,5 @@
 /*!
- * align-text <https://github.com/derzunov/pluralizer>
+ * pluralizer <https://github.com/derzunov/pluralizer>
  *
  * Copyright (c) 2016, Dmitry Erzunov.
  * Licensed under the MIT License.
