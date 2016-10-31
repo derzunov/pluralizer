@@ -1,6 +1,6 @@
 **Pluralizer**
 
-**Правило 1, 3, 5 для языков с тремя формами, например, Русский**
+**1, 3, 5 rule for 3-forms languages Russian, for example**
 
 var str1 = 'одна' + pluralize( 'ru', 1, ['штука', 'штуки', 'штук'] ) // "одна штука"
 
@@ -9,7 +9,7 @@ var str2 = 'три' + pluralize( 'ru', 3, ['штука', 'штуки', 'штук
 var str3 = 'пять' + pluralize( 'ru', 5, ['штука', 'штуки', 'штук'] ) // "пять штук"
 
 
-**Для языков с двумя формами, как английский, французский и немецкий, например** 
+**2-forms languages like english, french and german** 
 
 var str1 = 'one' + pluralize( 'en', 1, ['thing', 'things'] ) // "one thing"
 
