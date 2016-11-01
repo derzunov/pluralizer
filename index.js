@@ -24,11 +24,17 @@ var pluralFormSixFormsDefault = function( number, titles ) {
 
 var pluralize = function( languageCode, number, titles ) {
     switch( languageCode ) {
-        case 'ar-AR' || 'ar':
+        case 'ar-AR':
+        case 'ar':
             return pluralFormSixFormsDefault( number, titles );
             break;
 
-        case 'en-UK' || 'en-US' ||  'en' || 'de-DE' || 'de' || 'fr-FR' || 'de':
+        case 'en-UK':
+        case 'en-US':
+        case 'en':
+        case 'de-DE':
+        case 'de':
+        case 'fr-FR':
             // En: 1 thing, 2 things, 5 things
             return pluralFormTwoFormsDefault( number, titles );
             break;
