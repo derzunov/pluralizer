@@ -12,6 +12,11 @@ var pluralFormTwoFormsDefault = function( number, titles ) {
     return titles[plural]
 };
 
+var pluralFormTwoFormsSecond = function( number, titles ) {
+    var plural = number > 1 ? 1 : 0;
+    return titles[plural]
+};
+
 var pluralFormThreeFormsDefault = function( number, titles ) {
     var cases = [2, 0, 1, 1, 1, 2];
     return titles[number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]];
@@ -57,9 +62,16 @@ var pluralize = function( languageCode, number, titles ) {
         case 'en':
         case 'de-DE':
         case 'de':
-        case 'fr-FR':
-            // En: 1 thing, 2 things, 5 things
             return pluralFormTwoFormsDefault( number, titles );
+            break;
+
+        case 'fr-FR':
+        case 'fr':
+        case 'pt-BR':
+        case 'br':
+        case 'oc':
+        case 'tr':
+            return pluralFormTwoFormsSecond( number, titles );
             break;
 
         case 'ru-RU':
