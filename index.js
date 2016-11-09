@@ -22,11 +22,34 @@ var pluralFormSixFormsDefault = function( number, titles ) {
     return titles[plural];
 };
 
+var pluralFormCs = function( number, titles ) {
+    var plural = number === 1 ? 0 : number >= 2 && number <= 4 ? 1 : 2;
+    return titles[ plural ];
+};
+
+var pluralFormPl = function( number, titles ) {
+    var plural = number === 1 ? 0 : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 10 || number % 100 >= 20) ? 1 : 2;
+    return titles[plural];
+};
+// Just for uniformity
+var pluralFormOneForm = function( number, titles ) {
+    var plural = 0;
+    return titles[plural];
+};
+
 var pluralize = function( languageCode, number, titles ) {
     switch( languageCode ) {
         case 'ar-AR':
         case 'ar':
             return pluralFormSixFormsDefault( number, titles );
+            break;
+
+        case 'cs':
+            return pluralFormCs( number, titles );
+            break;
+
+        case 'pl':
+            return pluralFormPl( number, titles );
             break;
 
         case 'en-UK':
@@ -38,9 +61,15 @@ var pluralize = function( languageCode, number, titles ) {
             // En: 1 thing, 2 things, 5 things
             return pluralFormTwoFormsDefault( number, titles );
             break;
-        default:
+
+        case 'ru-RU':
+        case 'ru':
             // Default ru-RU for example - 1 штука, 3 штуки, 5 штук
-            return pluralFormThreeFormsDefault( number, titles )
+            return pluralFormThreeFormsDefault( number, titles );
+            break;
+
+        default:
+            return pluralFormOneForm( number, titles );
 
     }
 };

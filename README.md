@@ -1,28 +1,55 @@
 Pluralizer
 ==========
+
 ```javascript
 var pluralize = require('pluralizr');
 ```
 
 
 
-**1, 3, 5 rule for 3-forms languages. Russian, for example**
+**Russian ( 3 forms )**
 
 ```javascript
-var str1 = 'одна' + pluralize( 'ru', 1, ['штука', 'штуки', 'штук'] ) // "одна штука"
+var str1 = '1' + pluralize( 'ru', 1, [ 'час', 'часа', 'часов' ] ) // '1 час'
 
-var str2 = 'три' + pluralize( 'ru', 3, ['штука', 'штуки', 'штук'] ) // "три штуки"
+var str2 = '3' + pluralize( 'ru', 3, [ 'час', 'часа', 'часов' ] ) // '3 часа'
 
-var str3 = 'пять' + pluralize( 'ru', 5, ['штука', 'штуки', 'штук'] ) // "пять штук"
+var str3 = '5' + pluralize( 'ru', 5, [ 'час', 'часа', 'часов' ] ) // '5 часов'
+
+var str3 = '21' + pluralize( 'ru', 21, [ 'час', 'часа', 'часов' ] ) // '21 час'
 ```
 
-**2-forms languages like english, french and german** 
+**Polish ( other 3 forms )** 
 
 
 ```javascript
-var str1 = 'one' + pluralize( 'en', 1, ['thing', 'things'] ) // "one thing"
+var str1 = pluralize( 'pl', 1, [ 'godzina', 'godziny', 'godzin' ] ) // 'godzina'
 
-var str2 = 'three' + pluralize( 'en', 3, ['thing', 'things'] ) // "three things"
+var str2 = pluralize( 'pl', 2, [ 'godzina', 'godziny', 'godzin' ] ) // 'godziny'
 
-var str3 = 'five' + pluralize( 'en', 5, ['thing', 'things'] ) // "five things"
+var str3 = pluralize( 'pl', 7, [ 'godzina', 'godziny', 'godzin' ] ) // 'godzin'
+
+var str4 = pluralize( 'pl', 21, [ 'godzina', 'godziny', 'godzin' ] ) // 'godzin'
+```
+
+**English, French and German ( 2 forms )** 
+
+
+```javascript
+var str1 = '1' + pluralize( 'en', 1, [ 'hour', 'hours' ] ) // 'one hour'
+
+var str2 = '3' + pluralize( 'en', 3, [ 'hour', 'hours' ] ) // 'three hours'
+
+var str3 = '5' + pluralize( 'en', 5, [ 'hour', 'hours' ] ) // 'five hours'
+```
+
+
+** Chinese ( zh, zh_CN, zh_HK, zh_TW ), Japanese ( ja ), Kazakh( kk ), Korean( ko ), Persian ( fa ), Indonesian (id) and so on ( 1 form using )** 
+
+
+```javascript
+var str1 = pluralize( 'zh', 21, [ '小时' ] ) // '小时'
+
+var str2 = '3' + pluralize( 'zh', 3, [ '小时' ] ) // '小时'
+
 ```
