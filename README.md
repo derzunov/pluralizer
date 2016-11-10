@@ -44,7 +44,7 @@ var str3 = '5' + pluralize( 'en', 5, [ 'hour', 'hours' ] ) // 'five hours'
 ```
 
 
-** Chinese ( zh, zh_CN, zh_HK, zh_TW ), Japanese ( ja ), Kazakh( kk ), Korean( ko ), Persian ( fa ), Indonesian (id) and so on ( 1 form using )** 
+**Chinese ( zh, zh_CN, zh_HK, zh_TW ), Japanese ( ja ), Kazakh( kk ), Korean( ko ), Persian ( fa ), Indonesian (id) and so on ( 1 form using )** 
 
 
 ```javascript
