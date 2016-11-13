@@ -1,34 +1,39 @@
 {
-    "name": "pluralizr",
-    "version": "0.2.2",
-    "description": "Pluralize function",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "pluralize",
-        "plural forms",
-        "Singular",
-        "nouns",
-        "плюральные",
-        "формы",
-        "plural",
-        "french",
-        "german",
-        "english",
-        "russian",
-        "i18n",
-        "localization"
-    ],
-    "author": "derzunov (derzunov.su)",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/derzunov/pluralizer.git"
-    },
-    "bugs": {
-        "url": "https://github.com/derzunov/pluralizer/issues"
-    },
-    "homepage": "https://github.com/derzunov/pluralizer#readme"
+  "name": "pluralizr",
+  "version": "0.2.2",
+  "description": "Pluralize function",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "pluralize",
+    "plural forms",
+    "Singular",
+    "nouns",
+    "плюральные",
+    "формы",
+    "plural",
+    "french",
+    "german",
+    "english",
+    "russian",
+    "i18n",
+    "localization"
+  ],
+  "author": "derzunov (derzunov.su)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derzunov/pluralizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/derzunov/pluralizer/issues"
+  },
+  "homepage": "https://github.com/derzunov/pluralizer#readme",
+  "devDependencies": {
+    "babel-jest": "^17.0.0",
+    "babel-preset-es2015": "^6.18.0",
+    "jest": "^17.0.0"
+  }
 }
