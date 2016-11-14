@@ -1,0 +1,10 @@
+__tests__
+
+.babelrc
+.editorconfig
+.eslintrc
+.gitignore
+.idea
+.npmignore
+.travis.yml
+node_modules/
